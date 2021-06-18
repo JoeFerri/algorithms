@@ -6,7 +6,7 @@
 
 # Algorithms
 
-> Studio algoritmi.
+> Study of algorithms.
 
 ---
 
