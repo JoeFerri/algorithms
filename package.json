@@ -14,7 +14,7 @@
     "start": "npm-run-all -s clean build",
     "clean": "del-cli dist",
     "build": "tsc --noImplicitOverride",
-    "test": "cross-env-shell mocha --timeout 5000 -r ts-node/register ${npm_package_config_mocha_glob}",
+    "test": "cross-env-shell mocha --timeout 9000 -r ts-node/register ${npm_package_config_mocha_glob}",
     "test-only": "cross-env-shell mocha --timeout 5000 -r ts-node/register tests/${npm_config_file}.test.ts",
     "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test"
   },

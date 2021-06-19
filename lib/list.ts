@@ -36,7 +36,7 @@ export class PosNode<T> extends Node<T,PosNode<T>> {
   }
 
   get pred() : PosNode<T>|null {
-    return getObj(this.parent).to();
+    return this.parent != null ? this.parent?.to() : null;
   }
 
   set pred(p: PosNode<T>|null) {
@@ -44,7 +44,7 @@ export class PosNode<T> extends Node<T,PosNode<T>> {
   }
 
   get succ() : PosNode<T>|null {
-    return getObj(this.child).to();
+    return this.child != null ? this.child?.to() : null;
   }
 
   set succ(p: PosNode<T>|null) {

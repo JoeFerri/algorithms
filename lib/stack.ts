@@ -10,7 +10,6 @@
 import { OperationError } from "./error";
 import { List, PosNode } from "./list";
 import { int } from "./types";
-import { isNil } from "./utils";
 
 /*
  * LIFO - Last-in, First-out
@@ -48,7 +47,7 @@ export class Stack<T> {
   pop() : T {
     if (this.n == -1)
       throw new OperationError("stack empty.");
-    return this.A[--this.n];
+    return this.A[this.n--];
   }
 
   push(item: T) : int {
