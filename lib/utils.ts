@@ -16,3 +16,11 @@ export function getObj<T>(obj: T|null|undefined) : T {
 export function isNil(obj: any) : boolean {
   return obj == null || obj == undefined;
 }
+
+
+export function getArray<T>(dim: number, init: ()=>T) {
+  let a: T[] = [];
+  for (let i = 0; i < dim; i++)
+    a.push(init());
+  return a;
+}

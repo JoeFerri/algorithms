@@ -169,6 +169,16 @@ export class List<T> {
     return this.insert(value, p);
   }
 
+  headinsert(value: T) : PosNode<T> {
+    if (this._head == null)
+      return this.insert(value);
+    let t: PosNode<T> = new PosNode<T>({value: value});
+    t.succ = this._head; // Insert at the end
+    this._head!.pred = t;
+    this._head = t;
+    return t;
+  }
+
   remove(p: PosNode<T>) {
     if (p.pred == null)
       this._head = p.succ;
