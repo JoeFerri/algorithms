@@ -21,7 +21,7 @@ const MAX_DIM = 999999;
 
 export class Queue<T> {
 
-  private A: T[];     // items
+  private A: T[];     // items - circular vector
   private head: int;  // head
   private n: int;     // dim
   readonly m: int;    // max dim.
@@ -68,7 +68,7 @@ export class Queue<T> {
 
 export class DQueue<T> {
 
-  private A: T[];     // items
+  private A: T[];     // items - vector
   readonly m: int;    // max dim.
 
   constructor(dim: int = MAX_DIM) {

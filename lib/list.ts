@@ -9,20 +9,19 @@
 
 import { Node } from "./node";
 import { int } from "./types";
-import { getObj } from "./utils";
 
 
 
 export interface OptPosNode<T> {
   pred?:  PosNode<T>|null;
   succ?:  PosNode<T>|null;
-  value?: T|null|undefined;
+  value: T;
 }
 
 
 export class PosNode<T> extends Node<T,PosNode<T>> {
 
-  constructor(opt: OptPosNode<T> = {}) {
+  constructor(opt: OptPosNode<T>) {
     super({
       parent: opt.pred != undefined ? opt.pred.node() : null,
       child: opt.succ != undefined ? opt.succ.node() : null,
