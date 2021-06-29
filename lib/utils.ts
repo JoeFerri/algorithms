@@ -8,19 +8,15 @@
 
 
 
-export function getObj<T>(obj: T|null|undefined) : T {
-  return obj != null && obj != undefined ? obj : {} as T;
-}
+export type nil = null | undefined;
 
-
-export function isNil(obj: any) : boolean {
+export function isNil(obj: any) : obj is nil {
   return obj == null || obj == undefined;
 }
 
-
-export function getArray<T>(dim: number, init: ()=>T) {
+export function getArray<T>(dim: number, init: (i: number)=>T) {
   let a: T[] = [];
   for (let i = 0; i < dim; i++)
-    a.push(init());
+    a.push(init(i));
   return a;
 }
