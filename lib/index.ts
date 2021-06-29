@@ -7,8 +7,12 @@
 
 
 
+export * from "./array";
+export * from "./binarysearch";
 export * from "./error";
+export * from "./math";
 export * from "./mergesort";
+export * from "./quicksort";
 export * from "./types";
 export * from "./utils";
  
