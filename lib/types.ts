@@ -8,3 +8,16 @@
 
 
 export type int = number;
+
+
+export interface KeyObject<T> {
+  key: T;
+}
+
+export interface ValueObject<T> {
+  value: T;
+}
+
+export interface PriorityObject<T> {
+  priority: T;
+}
