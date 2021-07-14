@@ -14,6 +14,14 @@ export interface KeyObject<T> {
   key: T;
 }
 
+export interface IndexObject {
+  index: int;
+}
+
+export interface IndexNObject {
+  index: number;
+}
+
 export interface ValueObject<T> {
   value: T;
 }

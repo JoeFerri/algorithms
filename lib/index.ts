@@ -7,6 +7,8 @@
 
 
 
+export * from "./sort/insertionsort";
+
 export * from "./array";
 export * from "./binarysearch";
 export * from "./countingsort";
