@@ -9,6 +9,11 @@
 
 export type int = number;
 
+export type nil = null | undefined;
+
+export function isNil(obj: any) : obj is nil {
+  return obj == null || obj == undefined;
+}
 
 export interface KeyObject<T> {
   key: T;

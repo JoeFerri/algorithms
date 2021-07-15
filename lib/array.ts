@@ -25,6 +25,12 @@ export function abuild<T>(dim: number, init?: (i: int)=>T|undefined) : (T|undefi
   return A;
 }
 
+export function getArray<T>(dim: number, init: (i: number)=>T) {
+  let a: T[] = [];
+  for (let i = 0; i < dim; i++)
+    a.push(init(i));
+  return a;
+}
 
 // return array di interi
 export function aint(from: int = 0, to: int = 99) : int[] {
@@ -33,20 +39,20 @@ export function aint(from: int = 0, to: int = 99) : int[] {
 
 
 /**
- * Mescola gli elementi dell'array passato come argomento.
+ * Shuffle the elements of the array passed as an argument.
+ *
+ * Does not modify the calling array.
+ *
+ * Uses the Fisher–Yates shuffle algorithm.
  * 
- * Non modifica l'array chiamante.
+ * Eg. shuffle([0,1,2,3]) ---> [3,1,0,2]
  * 
- * Utilizza l'algoritmo Fisher–Yates shuffle.
- * 
- * Es. shuffle([0,1,2,3]) ---> [3,1,0,2]
- * 
- * @param {T[]} array: un generico array
+ * @param {T[]} array: a generic array
  * 
  * @see https://javascript.info/task/shuffle
  * @see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
  * 
- * @returns un nuovo array con gli elementi mescolati
+ * @returns a new array with the mixed elements
  */
 export function shuffle<T>(array?: T[]) : T[] {
   array = [...(array || [])];

@@ -11,6 +11,7 @@ export * from "./sort/insertionsort";
 
 export * from "./array";
 export * from "./binarysearch";
+export * from "./comparison";
 export * from "./countingsort";
 export * from "./darray";
 export * from "./error";
@@ -23,6 +24,6 @@ export * from "./queue";
 export * from "./quicksort";
 export * from "./stack";
 export * from "./types";
-export * from "./utils";
+// export * from "./utils";
  
 export {};

@@ -7,8 +7,7 @@
 
 import { swap } from "./array";
 import { rndInt } from "./math";
-import { int } from "./types";
-import { isNil } from "./utils";
+import { int, isNil } from "./types";
 
 
 

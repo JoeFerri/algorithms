@@ -6,7 +6,7 @@
  */
 
 import { int } from "./types";
-import { isNil } from "./utils";
+import { isNil } from "./types";
 
 
 
