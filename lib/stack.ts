@@ -12,8 +12,8 @@ import { OperationError } from "./error";
 import { int } from "./types";
 
 /*
-* LIFO - Last-in, First-out
-*/
+ * LIFO - Last-in, First-out
+ */
 
 const MAX_DIM = 999;
 

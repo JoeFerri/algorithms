@@ -25,7 +25,7 @@ export function abuild<T>(dim: number, init?: (i: int)=>T|undefined) : (T|undefi
   return A;
 }
 
-export function getArray<T>(dim: number, init: (i: number)=>T) {
+export function atbuild<T>(dim: number, init: (i: number)=>T) {
   let a: T[] = [];
   for (let i = 0; i < dim; i++)
     a.push(init(i));

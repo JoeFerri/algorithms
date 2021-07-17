@@ -8,6 +8,7 @@
 
 
 export * from "./sort/insertionsort";
+export * from "./sort/mergesort";
 
 export * from "./array";
 export * from "./binarysearch";
@@ -19,7 +20,6 @@ export * from "./heap";
 export * from "./heappriorityqueue";
 export * from "./heapsort";
 export * from "./math";
-export * from "./mergesort";
 export * from "./queue";
 export * from "./quicksort";
 export * from "./stack";

@@ -12,8 +12,8 @@ import { OperationError } from "./error";
 import { int } from "./types";
 
 /*
-* FIFO - First-in, First-out
-*/
+ * FIFO - First-in, First-out
+ */
 
 const MAX_DIM = 999;
 
@@ -42,13 +42,13 @@ export class Queue<T> {
 
   top() : T {
     if (this.n == 0)
-      throw new OperationError("stack empty.");
+      throw new OperationError("queue empty.");
     return this.A[this.head] as T;
   }
 
   dequeue() : T {
     if (this.n == 0)
-      throw new OperationError("stack empty.");
+      throw new OperationError("queue empty.");
     let t: T = this.A[this.head] as T;
     this.head = (this.head+1)%this.m;
     this.n--;
@@ -57,7 +57,7 @@ export class Queue<T> {
 
   enqueue(item: T) : int {
     if (this.n >= this.m)
-      throw new OperationError("stack full");
+      throw new OperationError("queue full");
     this.A[(this.head + this.n)%this.m] = item;
     this.n++;
     return this.length;

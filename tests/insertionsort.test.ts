@@ -27,6 +27,10 @@ describe(`insertionSort`, function() {
     $$.insertionSort($$.shuffle($$.aint())).join(',').should.to.be.equal($$.aint().join(',')); // 0,1,2,3,..,99
   });
 
+  it(`insertionSort inverse`, function() {
+    $$.insertionSort($$.shuffle([1,2,3,4,5,6]),(a,b)=>a<b).join(',').should.to.be.equal("6,5,4,3,2,1");
+  });
+
   it(`insertionSortObj`, function() {
     $$.insertionSortObj($$.shuffle([]),greaterThan).join(',').should.to.be.equal("");
     $$.insertionSortObj($$.shuffle(['a']),greaterThan).join(',').should.to.be.equal("a");

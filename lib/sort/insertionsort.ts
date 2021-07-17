@@ -6,43 +6,25 @@
  */
 
 import { gt } from "../comparison";
-import { int } from "../types";
 
 
 
 /**
  * The insertionSort() sorts the array in loco.
  * 
- * Time(n)  = Θ(n²).
- * Space(n) = Θ(n).
- * 
- * @param {int[]} A - An array of integers
- * @param {gt<int>} greaterThan - Optional - A comparison function for sorting.
- * @returns {int[]} The sorted array.
+ * @param {number[]} A - An array of number
+ * @param {gt<number>} greaterThan - Optional - A comparison function for sorting.
+ * @returns {number[]} The sorted array.
  */
-export function insertionSort(A: int[], greaterThan?: gt<int>) : int[] {
+export function insertionSort(A: number[], greaterThan?: gt<number>) : number[] {
   if (greaterThan == undefined)
     greaterThan = (a,b) => a > b;
-
-  for (let j = 1; j < A.length; j++) {
-    let
-      key: int = A[j],
-      i = j-1;
-    while (i >= 0 && greaterThan(A[i],key)) {
-      A[i+1] = A[i];
-      i--;
-    }
-    A[i+1] = key;
-  }
-  return A;
+  return insertionSortObj(A, greaterThan);
 }
 
 
 /**
  * The insertionSortObj() sorts the array in loco.
- * 
- * Time(n)  = Θ(n²).
- * Space(n) = Θ(n).
  * 
  * @param {T[]} A - An array of T.
  * @param {gt<T>} greaterThan - A comparison function for sorting.
