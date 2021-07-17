@@ -10,6 +10,8 @@
 export * from "./sort/insertionsort";
 export * from "./sort/mergesort";
 
+export * from "./test-utils/consoletest";
+
 export * from "./array";
 export * from "./binarysearch";
 export * from "./comparison";

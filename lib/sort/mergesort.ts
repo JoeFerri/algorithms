@@ -7,6 +7,7 @@
 
 import { lt } from "../comparison";
 import { int } from "../types";
+import { insertionSort } from "./insertionsort";
 
 
 /**
